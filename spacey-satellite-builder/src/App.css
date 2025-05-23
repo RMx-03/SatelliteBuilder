@@ -1,0 +1,187 @@
+/* Custom App Styles */
+
+/* Animation for the avatar speaking */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation for floating elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glow effect animation for webcam */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.8), 0 0 30px rgba(99, 102, 241, 0.5);
+  }
+}
+
+/* Orbit animation for elements around webcam */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(70px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(70px) rotate(-360deg);
+  }
+}
+
+/* Slow spin animation */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse slow animation */
+@keyframes pulse-slow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 15s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Webcam container styles */
+.webcam-container {
+  border: 2px solid rgba(56, 189, 248, 0.3);
+  transition: border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.webcam-container:hover {
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+.webcam-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  animation: slow-spin 15s linear infinite;
+}
+
+/* Video element styling */
+video {
+  transform: scaleX(-1); /* Mirror the webcam feed */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.webcam-display-container {
+  aspect-ratio: 1 / 1;
+}
+
+/* Badge animation */
+.badge {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+/* Quiz option styles */
+.quiz-option {
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.quiz-option:hover:not(.selected):not(.bg-green-600):not(.bg-red-600) {
+  background-color: rgba(30, 58, 138, 0.5);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Speech bubble styles */
+.speech-bubble {
+  position: relative;
+  background-color: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent rgba(30, 41, 59, 0.7) transparent;
+}
+
+/* Mission Control sidebar */
+.sticky {
+  position: sticky;
+  top: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .avatar-container {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .webcam-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Button styles */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 

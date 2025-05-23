@@ -1,0 +1,190 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating animation for badges */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom styles for webcam sidebar and responsive layout */
+.webcam-sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  min-height: 300px;
+}
+
+/* Layout containers for steps 2+ */
+.lesson-screen-container,
+.builder-screen-container,
+.quiz-screen-container,
+.reward-screen-container {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* Improved responsive layout */
+@media (max-width: 1024px) {
+  .webcam-sidebar {
+    position: static;
+    margin-bottom: 1rem;
+    min-height: 250px;
+  }
+  
+  .lesson-screen-container .flex,
+  .builder-screen-container .flex,
+  .quiz-screen-container .flex,
+  .reward-screen-container .flex {
+    flex-direction: column;
+  }
+  
+  .lesson-screen-container .lg\:w-1\/4,
+  .builder-screen-container .lg\:w-1\/4,
+  .quiz-screen-container .lg\:w-1\/4,
+  .reward-screen-container .lg\:w-1\/4 {
+    width: 100%;
+    padding: 1rem;
+    order: 2;
+  }
+  
+  .lesson-screen-container .lg\:w-3\/4,
+  .builder-screen-container .lg\:w-3\/4,
+  .quiz-screen-container .lg\:w-3\/4,
+  .reward-screen-container .lg\:w-3\/4 {
+    width: 100%;
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .webcam-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .webcam-sidebar {
+    min-height: 200px;
+  }
+  
+  .lesson-screen-container,
+  .builder-screen-container,
+  .quiz-screen-container,
+  .reward-screen-container {
+    padding: 0.5rem;
+  }
+}
+
+/* Smooth transitions for step changes */
+.lesson-screen, .builder-screen, .quiz-screen, .reward-screen, .ready-screen {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.lesson-screen-container, .builder-screen-container, .quiz-screen-container, .reward-screen-container {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Better spacing for mobile */
+@media (max-width: 640px) {
+  .space-button {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .webcam-container {
+    max-width: 250px;
+  }
+  
+  .webcam-sidebar {
+    padding: 0.75rem !important;
+    min-height: 180px;
+  }
+}
+
+/* Webcam feed improvements */
+.webcam-container video {
+  border-radius: 0.75rem;
+}
+
+/* Center content better */
+.max-w-4xl, .max-w-6xl {
+  text-align: center;
+}
+
+/* Mission Control heading style */
+.webcam-sidebar h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

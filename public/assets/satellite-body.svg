@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Main body - cylindrical -->
+  <g transform="translate(100, 100)">
+    <!-- Main body -->
+    <ellipse cx="0" cy="-40" rx="30" ry="15" fill="#3490dc" stroke="#1a202c" stroke-width="2" />
+    <rect x="-30" y="-40" width="60" height="80" fill="#3490dc" stroke="#1a202c" stroke-width="2" />
+    <ellipse cx="0" cy="40" rx="30" ry="15" fill="#3490dc" stroke="#1a202c" stroke-width="2" />
+    
+    <!-- Details -->
+    <rect x="-20" y="-30" width="40" height="60" fill="#2c5282" stroke="#1a202c" stroke-width="1" rx="5" ry="5" />
+    <circle cx="0" cy="0" r="10" fill="#1a202c" stroke="#718096" stroke-width="2" />
+    <circle cx="0" cy="0" r="5" fill="#4299e1" />
+    
+    <!-- Rings -->
+    <rect x="-32" y="-10" width="64" height="5" fill="#718096" stroke="#1a202c" stroke-width="1" rx="2" ry="2" />
+    <rect x="-32" y="15" width="64" height="5" fill="#718096" stroke="#1a202c" stroke-width="1" rx="2" ry="2" />
+    
+    <!-- Small lights -->
+    <circle cx="-15" cy="-20" r="2" fill="#f6e05e" />
+    <circle cx="15" cy="-20" r="2" fill="#f6e05e" />
+    <circle cx="-15" cy="20" r="2" fill="#f6e05e" />
+    <circle cx="15" cy="20" r="2" fill="#f6e05e" />
+  </g>
+</svg> 

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g transform="translate(100, 100)">
+    <!-- Base of antenna -->
+    <rect x="-15" y="30" width="30" height="10" fill="#718096" stroke="#1a202c" stroke-width="2" rx="2" ry="2" />
+    
+    <!-- Main pole -->
+    <rect x="-3" y="-60" width="6" height="90" fill="#a0aec0" stroke="#1a202c" stroke-width="1" />
+    
+    <!-- Dish -->
+    <path d="M 0,-60 
+             C -40,-70 -50,-30 -40,0 
+             L -30,0
+             C -35,-25 -30,-55 0,-60 Z" 
+          fill="#cbd5e0" stroke="#1a202c" stroke-width="2" />
+    
+    <!-- Dish Details -->
+    <path d="M -38,-35 
+             C -35,-45 -25,-55 0,-60" 
+          fill="none" stroke="#a0aec0" stroke-width="1" stroke-dasharray="2,2" />
+    <path d="M -35,-20 
+             C -32,-35 -20,-50 -5,-55" 
+          fill="none" stroke="#a0aec0" stroke-width="1" stroke-dasharray="2,2" />
+    
+    <!-- Small receivers -->
+    <circle cx="0" cy="-65" r="3" fill="#f6e05e" stroke="#1a202c" stroke-width="1" />
+    <circle cx="5" cy="-55" r="2" fill="#f6e05e" stroke="#1a202c" stroke-width="1" />
+    <circle cx="-5" cy="-55" r="2" fill="#f6e05e" stroke="#1a202c" stroke-width="1" />
+    
+    <!-- Connection to base -->
+    <circle cx="0" cy="30" r="4" fill="#2d3748" stroke="#1a202c" stroke-width="1" />
+    
+    <!-- Signal waves (animated in real implementation) -->
+    <path d="M 10,-65 C 15,-67 20,-65 25,-60" fill="none" stroke="#f6e05e" stroke-width="1" />
+    <path d="M 10,-60 C 20,-65 30,-60 35,-50" fill="none" stroke="#f6e05e" stroke-width="1" />
+    <path d="M 10,-55 C 25,-58 35,-50 40,-40" fill="none" stroke="#f6e05e" stroke-width="1" />
+  </g>
+</svg> 
