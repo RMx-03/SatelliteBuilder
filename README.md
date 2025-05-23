@@ -1,15 +1,13 @@
 # Spacey Satellite Builder 🚀
 
-An interactive, educational web application where children learn about satellites and space exploration through an engaging AI-driven learning experience with Nova, their animated space guide.
-
-![Spacey Satellite Builder](https://via.placeholder.com/800x400?text=Spacey+Satellite+Builder)
+An interactive, educational web application where children learn about satellites and space exploration through an engaging AI-driven learning experience with Nova, animated space guide.
 
 ## ✨ Features
 
 ### 🧑‍🚀 AI Avatar Guide (Nova)
 - **Animated SVG avatar** with speaking animations and sound waves
-- **Advanced female voice synthesis** with US/UK English prioritization  
-- **Voice customization interface** with 8 different female voice options
+- **Advanced voice synthesis** with US/UK English prioritization  
+- **Voice customization interface** with different voice options
 - **Intelligent voice selection** that filters out non-English variants
 - **Responsive speech controls** with play again and voice testing features
 
